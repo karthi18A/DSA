@@ -25,13 +25,10 @@ class Solution {
                 rightSum += num.charAt(i) - '0';
             }
         }
-
-        // Odd number of '?' -> Alice always wins
         if ((leftQ + rightQ) % 2 == 1) {
             return true;
         }
 
-        // Bob wins only when the difference can be perfectly balanced
         return 2 * (leftSum - rightSum) != 9 * (rightQ - leftQ);
     }
 }
